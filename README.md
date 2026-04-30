@@ -1,4 +1,4 @@
-# AREE  AI-Resistant Exam Environment
+# AI-Resistant Exam Environment (AREE)
 
 **Author:** Ujwal Pathak
 **Student ID:** U2650380
