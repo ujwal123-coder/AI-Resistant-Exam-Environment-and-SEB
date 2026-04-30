@@ -1,0 +1,54 @@
+/**
+ * Stylesheet for the local_examwatermark plugin.
+ *
+ * These styles provide the base layout for the watermark overlay.
+ * Critical styles are also injected inline via the
+ * before_standard_html_head callback in lib.php to ensure the overlay
+ * renders before this stylesheet is loaded.
+ *
+ * The !important declarations are intentional — they prevent the
+ * overlay from being hidden by theme styles or user-injected CSS.
+ * In a normal Moodle context this would be considered bad practice,
+ * but for a security overlay it is necessary.
+ *
+ * @package    local_examwatermark
+ * @copyright  2026 Ujwal Pathak <u2650380@example.ac.uk>
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
+/* Main overlay container — covers the entire viewport. */
+#examwatermark-overlay {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    pointer-events: none !important;
+    z-index: 99999 !important;
+    overflow: hidden !important;
+    display: block !important;
+    visibility: visible !important;
+    /* Ensure the overlay does not affect page layout. */
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+}
+
+/* Canvas element inside the overlay. */
+#examwatermark-canvas {
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
+    pointer-events: none !important;
+}
+
+/*
+ * When printing, hide the watermark to avoid wasting ink.
+ * SEB should block printing anyway, but this is a fallback.
+ */
+@media print {
+    #examwatermark-overlay {
+        display: none !important;
+    }
+}

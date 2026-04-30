@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- Start URL — change to match the deployment server -->
+    <key>startURL</key>
+    <string>http://localhost/moodle/mod/quiz/view.php?id=2</string>
+
+    <!-- ─── SCREEN CAPTURE BLOCKING (the whole point) ─── -->
+    <key>enablePrintScreen</key>
+    <false/>
+    <key>allowWindowCapture</key>
+    <false/>
+    <key>allowScreenSharing</key>
+    <false/>
+    <key>screenSharingMacEnforceBlocked</key>
+    <true/>
+    <key>allowDisplayMirroring</key>
+    <false/>
+    <key>allowedDisplaysMaxNumber</key>
+    <integer>1</integer>
+    <key>allowedDisplayBuiltin</key>
+    <true/>
+    <key>allowedDisplayBuiltinEnforce</key>
+    <true/>
+    <key>allowedDisplayBuiltinExceptDesktop</key>
+    <true/>
+
+    <!-- ─── CAMERA / MICROPHONE (required for AREE plugin) ─── -->
+    <key>browserMediaCaptureCamera</key>
+    <true/>
+    <key>browserMediaCaptureMicrophone</key>
+    <true/>
+    <key>browserMediaAutoplay</key>
+    <true/>
+    <key>allowVideoCapture</key>
+    <true/>
+    <key>allowAudioCapture</key>
+    <true/>
+    <key>browserMediaCaptureScreen</key>
+    <false/>
+
+    <!-- ─── COPY / PASTE BLOCKING ─── -->
+    <key>enablePrivateClipboard</key>
+    <true/>
+    <key>enablePrivateClipboardMacEnforce</key>
+    <true/>
+    <key>allowDictation</key>
+    <false/>
+    <key>allowDictionaryLookup</key>
+    <false/>
+    <key>allowFind</key>
+    <false/>
+
+    <!-- ─── KEYBOARD / NAVIGATION LOCKDOWN ─── -->
+    <key>enableEsc</key>
+    <false/>
+    <key>enableCtrlEsc</key>
+    <false/>
+    <key>enableAltEsc</key>
+    <false/>
+    <key>enableAltTab</key>
+    <false/>
+    <key>enableAltF4</key>
+    <false/>
+    <key>enableStartMenu</key>
+    <false/>
+    <key>enableRightMouse</key>
+    <false/>
+    <key>enableF1</key>
+    <false/>
+    <key>enableF2</key>
+    <false/>
+    <key>enableF3</key>
+    <false/>
+    <key>enableF4</key>
+    <false/>
+    <key>enableF5</key>
+    <true/>
+    <key>enableF6</key>
+    <false/>
+    <key>enableF7</key>
+    <false/>
+    <key>enableF8</key>
+    <false/>
+    <key>enableF9</key>
+    <false/>
+    <key>enableF10</key>
+    <false/>
+    <key>enableF11</key>
+    <false/>
+    <key>enableF12</key>
+    <false/>
+    <key>allowBrowsingBackForward</key>
+    <false/>
+    <key>blockPopUpWindows</key>
+    <false/>
+
+    <!-- ─── DEVELOPER TOOLS / VIEW SOURCE BLOCKING ─── -->
+    <key>allowDeveloperConsole</key>
+    <false/>
+    <key>enablePlugIns</key>
+    <false/>
+    <key>enableJava</key>
+    <false/>
+    <key>enableJavaScript</key>
+    <true/>
+
+    <!-- ─── DOWNLOADS / FILES BLOCKING ─── -->
+    <key>allowPDFReaderToolbar</key>
+    <false/>
+    <key>allowCustomDownLocation</key>
+    <false/>
+    <key>allowDownUploads</key>
+    <false/>
+
+    <!-- ─── URL FILTER (allow Moodle + TensorFlow CDN) ─── -->
+    <key>URLFilterEnable</key>
+    <true/>
+    <key>URLFilterEnableContentFilter</key>
+    <true/>
+    <key>URLFilterRules</key>
+    <array>
+        <dict>
+            <key>action</key>
+            <integer>1</integer>
+            <key>active</key>
+            <true/>
+            <key>expression</key>
+            <string>localhost/*</string>
+            <key>regex</key>
+            <false/>
+        </dict>
+        <dict>
+            <key>action</key>
+            <integer>1</integer>
+            <key>active</key>
+            <true/>
+            <key>expression</key>
+            <string>127.0.0.1/*</string>
+            <key>regex</key>
+            <false/>
+        </dict>
+        <dict>
+            <key>action</key>
+            <integer>1</integer>
+            <key>active</key>
+            <true/>
+            <key>expression</key>
+            <string>*.cdn.jsdelivr.net/*</string>
+            <key>regex</key>
+            <false/>
+        </dict>
+        <dict>
+            <key>action</key>
+            <integer>1</integer>
+            <key>active</key>
+            <true/>
+            <key>expression</key>
+            <string>cdn.jsdelivr.net/*</string>
+            <key>regex</key>
+            <false/>
+        </dict>
+        <dict>
+            <key>action</key>
+            <integer>1</integer>
+            <key>active</key>
+            <true/>
+            <key>expression</key>
+            <string>storage.googleapis.com/*</string>
+            <key>regex</key>
+            <false/>
+        </dict>
+    </array>
+
+    <!-- ─── UI / TASKBAR ─── -->
+    <key>browserViewMode</key>
+    <integer>1</integer>
+    <key>showTaskBar</key>
+    <true/>
+    <key>showTime</key>
+    <true/>
+    <key>showInputLanguage</key>
+    <true/>
+    <key>showReloadButton</key>
+    <true/>
+    <key>browserWindowAllowReload</key>
+    <true/>
+    <key>taskBarHeight</key>
+    <integer>40</integer>
+
+    <!-- ─── APP-SWITCHING / SECURITY ─── -->
+    <key>enableAppSwitcherCheck</key>
+    <true/>
+    <key>forceAppFolderInstall</key>
+    <true/>
+    <key>ignoreExitKeys</key>
+    <true/>
+    <key>allowQuit</key>
+    <true/>
+    <key>hashedQuitPassword</key>
+    <string></string>
+
+    <!-- ─── INSIDE-SEB SYSTEM RESTRICTIONS ─── -->
+    <key>insideSebEnableSwitchUser</key>
+    <false/>
+    <key>insideSebEnableLockThisComputer</key>
+    <false/>
+    <key>insideSebEnableChangeAPassword</key>
+    <false/>
+    <key>insideSebEnableStartTaskManager</key>
+    <false/>
+    <key>insideSebEnableLogOff</key>
+    <false/>
+    <key>insideSebEnableShutDown</key>
+    <false/>
+
+    <!-- ─── VM & DISPLAY ─── -->
+    <key>allowVirtualMachine</key>
+    <false/>
+    <key>allowUserSwitching</key>
+    <false/>
+
+    <!-- ─── LOGGING ─── -->
+    <key>enableLogging</key>
+    <true/>
+
+    <!-- ─── NETWORK ─── -->
+    <key>allowWlan</key>
+    <true/>
+
+    <!-- ─── CONFIG TYPE ─── -->
+    <key>sebConfigPurpose</key>
+    <integer>0</integer>
+    <key>sendBrowserExamKey</key>
+    <true/>
+    <key>browserWindowWebView</key>
+    <integer>3</integer>
+</dict>
+</plist>

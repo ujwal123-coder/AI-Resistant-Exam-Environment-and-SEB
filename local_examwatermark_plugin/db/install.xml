@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="local/examwatermark/db" VERSION="20260424" COMMENT="local_examwatermark — exam monitoring log table">
+  <TABLES>
+    <TABLE NAME="local_examwatermark_log" COMMENT="Stores suspicious events detected during exams (phone detection, camera denial, etc.)">
+      <FIELDS>
+        <FIELD NAME="id"          TYPE="int"  LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+        <FIELD NAME="userid"      TYPE="int"  LENGTH="10" NOTNULL="true" DEFAULT="0"  COMMENT="Moodle user ID"/>
+        <FIELD NAME="studentid"   TYPE="char" LENGTH="255" NOTNULL="true" DEFAULT=""  COMMENT="Student ID number (idnumber field)"/>
+        <FIELD NAME="cmid"        TYPE="int"  LENGTH="10" NOTNULL="true" DEFAULT="0"  COMMENT="Course module ID of the quiz"/>
+        <FIELD NAME="attemptid"   TYPE="int"  LENGTH="10" NOTNULL="true" DEFAULT="0"  COMMENT="Quiz attempt ID"/>
+        <FIELD NAME="eventtype"   TYPE="char" LENGTH="100" NOTNULL="true" DEFAULT=""  COMMENT="phone_detected, camera_denied, exam_started"/>
+        <FIELD NAME="description" TYPE="text" NOTNULL="true"                          COMMENT="Human readable description of the event"/>
+        <FIELD NAME="timecreated" TYPE="int"  LENGTH="10" NOTNULL="true" DEFAULT="0"  COMMENT="Unix timestamp of the event"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+      </KEYS>
+      <INDEXES>
+        <INDEX NAME="userid"    UNIQUE="false" FIELDS="userid"/>
+        <INDEX NAME="cmid"      UNIQUE="false" FIELDS="cmid"/>
+        <INDEX NAME="eventtype" UNIQUE="false" FIELDS="eventtype"/>
+      </INDEXES>
+    </TABLE>
+  </TABLES>
+</XMLDB>
