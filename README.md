@@ -164,8 +164,8 @@ The plugin itself works identically on Mac and Windows when accessed through a n
 
 | Threat | SEB | Plugin | Combined |
 |---|---|---|---|
-| Screenshot (Cmd+Shift+3, PrintScreen) | ✅ | — | ✅ |
-| Copy text, paste into ChatGPT in another tab | ✅ | — | ✅ |
+| Screenshot (Cmd+Shift+3, PrintScreen) | ✅ | ❌ | ✅ |
+| Copy text, paste into ChatGPT in another tab | ✅ | ❌ | ✅ |
 | Cmd+Tab to other application | ✅ | ✅ (detect+kick) | ✅ |
 | Open browser developer tools | ✅ | ✅ | ✅ |
 | Switch to another browser tab | ✅ | ✅ | ✅ |
